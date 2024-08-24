@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:background="@color/gray_bg"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context=".ui.home.Tabs.send.SendFragment">
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Plain Text"
+            android:textColor="@color/label"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="-22dp"
+            tools:layout_editor_absoluteY="498dp" />
+
+        <EditText
+            android:id="@+id/receive_plain_text"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_edit"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Please insert yout plain text"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:textColorHint="@color/gray"
+            tools:layout_editor_absoluteX="-22dp"
+            tools:layout_editor_absoluteY="536dp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/receive_decrypt_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/blue_400"
+        android:text="Decrypt"
+        android:textAllCaps="false"
+        app:cornerRadius="18dp"
+        app:icon="@drawable/baseline_lock_open_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

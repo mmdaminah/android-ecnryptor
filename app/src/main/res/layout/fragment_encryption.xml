@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:padding="10dp"
+    tools:context=".ui.encryption.EncryptionFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Public Key"
+                android:textColor="@color/label"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/encryption_copy_public_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:foregroundTint="#9F9B9B"
+                android:gravity="center|end"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:text="Copy"
+                android:textAllCaps="false"
+                android:textColor="@color/label"
+                app:icon="@drawable/baseline_content_copy_24"
+                app:iconGravity="textStart"
+                app:iconPadding="6dp"
+                app:iconTint="@color/label" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/encryption_public_key"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/custom_edit"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Please insert yout public key or generate it"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:textColorHint="@color/gray"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/encryption_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="@color/blue_400"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/gen_keys"
+        android:textSize="10sp"
+        app:cornerRadius="18dp"
+        app:icon="@drawable/baseline_key_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PrivateKey"
+                android:textColor="@color/label"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/encryption_copy_private_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center|end"
+                android:padding="0dp"
+                android:text="Copy"
+                android:textAllCaps="false"
+                android:textColor="@color/label"
+                app:icon="@drawable/baseline_content_copy_24"
+                app:iconGravity="textStart"
+                app:iconPadding="6dp"
+                app:iconTint="@color/label" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/encryption_private_key_input"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_edit"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Please insert yout private key or generate it"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:textColorHint="@color/gray"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/enc_import_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray_btn"
+        android:gravity="center|left"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Import"
+        android:textAllCaps="false"
+        android:textColor="@color/label"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:icon="@drawable/baseline_upload_file_24"
+        app:iconTint="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <Button
+        android:id="@+id/enc_export_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray_btn"
+        android:gravity="center|left"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Export"
+        android:textAllCaps="false"
+        android:textColor="@color/label"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:icon="@drawable/baseline_upload_file_24"
+        app:iconTint="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enc_import_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

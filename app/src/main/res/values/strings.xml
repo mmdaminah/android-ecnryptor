@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Project</string>
+    <string name="title_home">Home</string>
+    <string name="title_encryption">Encryption</string>
+    <string name="Send">Send</string>
+    <string name="Receive">Receive</string>
+    <string name="gen_keys">Generate Keys</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="regenerate">Regenerate</string>
+    <string name="share">Share</string>
+
+
+</resources>
